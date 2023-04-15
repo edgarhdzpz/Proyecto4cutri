@@ -1,0 +1,323 @@
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Principal--color: #aa148abd;
+    --Color-Secundario--vino: #d112d8;
+    --Padding--3p:30px;
+}
+.imp{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    width: 100px;
+    margin: 10px;
+}
+.mainpoint{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+}
+
+body{
+    background-color: var(--Principal--color);
+}
+
+
+.botones{
+    background-color: var(--Principal--color);
+    padding: 8px;
+    justify-content: space-between;
+    display: flex;
+    box-shadow: 0 0 10px #4d2505;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    width: 50px;
+}
+
+.imguser{
+    width: var(--Padding--3p);
+    margin: .5rem;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.imgp{
+    border-radius: 10px;
+    width: 3.5rem;
+}
+
+.botonusuarios{
+    background-color: honeydew;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid v
+    ar(--Color-Secundario--vino);
+    color: var(--Color-Secundario--vino);
+    width: 120%;
+
+    transition: all .5s ease-in;    
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botonusuarios:hover{
+    background-color: rgb(42, 138, 228);
+    border: 2px solid var(--Color-Secundario--vino);
+    color: #000000;
+}
+
+.botonc{
+    background-color: rgb(12, 70, 196);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid v
+    ar(--Color-Secundario--vino);
+    color: var(--Color-Secundario--vino);
+    width: 10%;
+
+    transition: all .5s ease-in;    
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.imggoogle{
+    width: 30px;
+    margin: .5rem;
+    border-radius: 50%;
+}
+    
+.botongoogle{
+    text-align: center;
+    background-color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--Color-Secundario--vino);
+    width: 100%;
+    transition: all .5s ease-in;  
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botongoogle:hover{
+    background-color:aqua;
+    border: 2px solid rgb(2, 109, 248);
+    color: rgb(2, 59, 248);
+}
+
+.btnf{
+    text-align: center;
+    background-color: rgb(236, 214, 214);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: var(--Color-Secundario--vino);
+    width: 100%;
+    transition: all .5s ease-in;  
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnf:hover{
+    background-color:rgb(55, 214, 214);
+    border: 2px solid rgb(2, 109, 248);
+    color: rgb(2, 59, 248);
+}
+
+.imgface{
+    width: 30px;
+    margin: .5rem;
+    border-radius: 50%;
+}
+
+.newpage{
+    border-radius: 5px;
+    background-color: #12d82c;
+}
+
+#carrusel-caja {
+    -moz-animation: automatizacion 15s infinite linear;
+    -o-animation: automatizacion 15s infinite linear;
+    -webkit-animation: automatizacion 15s infinite linear;
+    animation: automatizacion 15s infinite linear;
+    -webkit-transition: all 0.75s ease;
+    -moz-transition: all 0.75s ease;
+    -ms-transition: all 0.75s ease;
+    -o-transition: all 0.75s ease;
+    transition: all 0.75s ease;
+    height: 500px;
+    width: 300%;
+    margin-top: 1.3rem;
+    margin-bottom: 0;
+}
+#carrusel-contenido {
+    overflow: hidden;
+}
+.imagenes{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+    height: 83vh;
+    width: 100vh;
+    object-fit: cover;
+   
+}
+
+.imagen{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+    height: 66vh;
+    width: 66vw;
+    object-fit: cover;
+}
+.carrusel-elemento {
+    float: left;
+    width: 33.333%;
+}
+
+.contenedorPrincipal{   
+    width: 95%;
+    /*borra lo que está en la página*/
+    /*display: none;*/   
+}
+
+footer{
+    background-color: rgba(33, 180, 107, 0.808);
+    text-align: center;
+    border: 3px solid black;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    bottom: 0;
+  }
+  footer:hover{
+    background-color: #4d2505;
+    text-overflow: 5%;
+  }
+
+  .mapa{
+    text-align: center;
+  }
+
+@-moz-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@-webkit-keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+@keyframes automatizacion {
+    0% {
+        margin-left: 0;
+    }
+    30% {
+        margin-left: 0;
+    }
+    35% {
+        margin-left: -100%;
+    }
+    65% {
+        margin-left: -100%;
+    }
+    70% {
+        margin-left: -200%;
+    }
+    95% {
+        margin-left: -200%;
+    }
+    100% {
+        margin-left: 0;
+    }
+}      
+
+.contacto{
+    width: 100%;
+    padding: .5rem;
+    text-align: center;
+    color: var(--Color-Secundario--vino);
+    font-size: 20px;
+    box-shadow: 0 0 10px #150f0d;
+}
+
+#map{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+    height: 80vh;
+    width: 100vh;
+    object-fit: cover;
+    border-radius: 12px 12px 12px 12px;
+    box-shadow: 10px #150f0d;
+    overflow: hidden;
+}
+
+.mapita{
+    overflow: hidden;
+    margin: 20px;
+    border-radius: 12px 12px 12px 12px;
+}
+
+
+
+@media (max-width: 600px){
+    .contacto{
+        padding: .3rem;
+        font-size: 10px;
+    }
+    .botonusuarios{
+        font-size: 10px;
+    }
+    .botongoogle{
+        width: 20vh;
+    }
+}

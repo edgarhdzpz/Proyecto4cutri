@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <title>Login</title>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+        <link rel="stylesheet" href="css/Estilos.css">
+        <link rel="stylesheet" href="CSS/mapa.css">
+    </head>
+
+    <body>
+        <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0" nonce="DGv64c0G"></script>
+        
+        <div class="mainpoint" id="cnt">
+            <div class="contenedorPrincipal" id="cont">
+                <div class="botones">
+                    <div>                    
+                        <button class="botonusuarios"><img src="./imagenes/usuario.png" class="imguser" alt="" id="imgu"></button>
+                    </div>
+
+                    <div>
+                        <button class="botongoogle" id="gogl"> <img src="./imagenes/google.png" class="imggoogle"><FONT COLOR="black" ><h4>Iniciar con Google</h4></FONT></button>
+                        <br>
+                        
+                       <div class="">
+                        <div id="content" class="">
+                            <button class="btnf" id="btn_init" class="btn btn-primary btn-lg" onclick=""> <img src="./imagenes/face.jpg" class="imgface"><FONT COLOR="black" ><h4>Continuar con Facebook</h4></FONT></button><br>
+                            <g></g>
+                                                    
+                            <label class="control-label">Estado:</label>
+                            <label id="lb_msj" class="control-label"></label> 
+                        </div>
+
+                       </div>
+                       
+                    </div>
+            
+                </div>
+     
+    
+                <div id="carrusel-contenido">
+                    <div id="carrusel-caja">
+                        <div class="carrusel-elemento">
+                            <img class="imagenes" src="imagenes/img1.jpg" >
+                        </div>
+                        <div class="carrusel-elemento">   
+                            <img class="imagenes" src="imagenes/img2.jpg">
+                        </div>
+                        <div class="carrusel-elemento">   
+                            <img class="imagenes" src="imagenes/img4.jpg">                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+
+        <div class="mainpoint" id="mnp">
+            <div class="contenedorPrincipal">
+                <div class="botones">
+                    <div>                    
+                        <button class="botonusuarios"><img src="./imagenes/usuarioL.png" class="imggoogle" alt=""><FONT COLOR="black" ><h4>Edgar Herrera</h4></FONT></button>
+                    </div>
+                    
+                    <div class="mapa">
+                        <button class="botongoogle" id="btn"> <img src="./imagenes/Fondo.jpg" class="imguser imgp"><FONT COLOR="black" ><h4>Inicio</h4></FONT></button>
+                    </div>     
+
+                   
+                </div>
+               
+    
+                <div class="mapita">
+                    <section>
+                        <h1>Obtener ubicacion y mostrarla en un mapa</h1>
+                        <div id="map" style="width:100%;height:600px;"></div>
+
+                        <label class="cont-label"><FONT COLOR="black" >Latitud:</FONT></label>
+                        <label id="lat" name="latitud" class="cont-label"></label><br>
+                        <label class="cont-label"><FONT COLOR="black" >Logitud:</FONT></label>
+                        <label id="long" name="longitud" class="cont-label"></label><br>
+                        <label class="cont-label">Nombre:</label>
+                        <label id="infoN" name="nombre" class="cont-label"></label>
+
+                        <button onclick="vermapa()">ver </button>
+                        <button onclick="enviarCoordenadas()">GuardarD</button>
+                        
+                    <script src="js/geolocalizacion.js"></script>
+                    <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuBEidKGDuQo7Bzf1uRg47MPaRRlEesw0">
+                    </script><br><br><br><br><br>
+                     </section>
+                  
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+                    <script src="http://maps.googleapis.com/api/js?sensor=false"></script>
+                    <script src="js/mapa.js"></script>
+                    <script src="js/paginaDos.js"></script>
+    
+          
+                </div>
+            </div>
+        </div>
+       
+
+        <section class="newpage">
+        <div class="mainpoint" id="inicioface" method="POST">
+            <div class="contenedorPrincipal">
+                <div class="botones">
+                    <div>
+                        <label class="cont-label">Nombre:</label>
+                        <label id="infoN" name="nombre" class="cont-label"></label> <br>
+                        
+                        <button id="get_user_picture" onclick="get_user_picture()" > get user picture </button><br>
+                            <img id="userPic" src="" alt="facebookImg" class="imp">
+                    </div> 
+                    <div class="mapa">
+                        <button class="botongoogle" id="btn_out" class="btn btn-primary btn-lg"><FONT COLOR="black" ><h4>Cerrar sesión</h4></FONT></button><br><br>
+                    </div> 
+                </div>
+
+                    <div class="mapa">
+                        <div class="fb-post" data-href="https://www.facebook.com/BanFrases/posts/pfbid0ohLbi94H1SNXx6u2QKEwDxFb1nym8TGfye9oYQCNXPPm9UinrPdvy84UcKFLS992l" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/BanFrases/posts/552153569647854" class="fb-xfbml-parse-ignore">Publicado por <a href="https://facebook.com/BanFrases">𝕭𝖆𝖓.</a> en&nbsp;<a href="https://www.facebook.com/BanFrases/posts/552153569647854">Viernes, 10 de junio de 2022</a></blockquote></div>
+                        <div>
+                           
+                        </div>
+                    </div>
+                    
+                    <div>                     
+                        <button id="btn_pos" class="btn btn-info btn-lg" onclick="postStory();">Postear link</button>
+                        <label class="control-label">Info:</label>
+                        <label id="lbmsj" class="control-label"></label> 
+                        <div  class="share"><br>
+                            <button class="botonc"><a href="http://www.facebook.com/sharer.php?u=https://www.wallpaperbetter.com/es/search?q=4k+anime" target="_blank">Compartir</a></button>
+                        </div>
+
+                        <div class="fb-comments" data-href="http://localhost/Login//Login.html" data-width="" data-numposts="4"></div>
+                    </div>
+                   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+                   <br><br><br><br><br>                 
+                
+            </div>
+        </div>
+        </section>
+
+       
+        <footer>
+            <h3 class="pdp">Contacto:
+                Edgar Herrera Pérez
+            </h3>
+        </footer>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    </body>
+   
+</html>
